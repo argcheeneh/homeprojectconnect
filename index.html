@@ -22,17 +22,56 @@
     <section id="form-section">
       <div class="container">
         <h2 class="fade-in">Start Your Project Today</h2>
+
         <div class="form-card">
-          <!-- Google Form Embed -->
-          <iframe src="YOUR_GOOGLE_FORM_EMBED_LINK_HERE"
-                  width="100%"
-                  height="900"
-                  frameborder="0"
-                  marginheight="0"
-                  marginwidth="0">
-            Loading…
-          </iframe>
+          <!-- FormSubmit HTML Form -->
+          <form action="https://formsubmit.co/YOUR_EMAIL" method="POST" class="custom-form">
+
+            <!-- Name -->
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+            <!-- Email -->
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+            <!-- Phone -->
+            <label for="phone">Phone Number</label>
+            <input type="text" id="phone" name="phone" placeholder="Your Phone" required>
+
+            <!-- Project Type -->
+            <label for="projectType">Project Type</label>
+            <select id="projectType" name="projectType" required>
+              <option value="" disabled selected>Select one</option>
+              <option value="Kitchen Remodel">Kitchen Remodel</option>
+              <option value="Bathroom Remodel">Bathroom Remodel</option>
+              <option value="New Home (1-2 story)">New Home (1-2 story)</option>
+              <option value="Home Addition">Home Addition</option>
+              <option value="Other">Other</option>
+            </select>
+
+            <!-- Project Size / Budget -->
+            <label for="budget">Estimated Budget (Optional)</label>
+            <input type="text" id="budget" name="budget" placeholder="e.g., $20,000 – $50,000">
+
+            <!-- Project Details -->
+            <label for="details">Project Details</label>
+            <textarea id="details" name="details" placeholder="Describe your project" rows="5" required></textarea>
+
+            <!-- Preferred Start Date -->
+            <label for="startDate">Preferred Start Date</label>
+            <input type="date" id="startDate" name="startDate">
+
+            <!-- Hidden field to redirect after submit -->
+            <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
+            <!-- Optional: disable CAPTCHA -->
+            <input type="hidden" name="_captcha" value="false">
+
+            <!-- Submit Button -->
+            <button type="submit">Get Matched Now</button>
+          </form>
         </div>
+
       </div>
     </section>
   </main>
