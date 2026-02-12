@@ -59,8 +59,15 @@
             <textarea id="details" name="details" placeholder="Describe your project" rows="5" required></textarea>
 
             <!-- Preferred Start Date -->
-            <label for="startDate">Preferred Start Date</label>
-            <input type="date" id="startDate" name="startDate">
+            <label for="startTime">Approximate Start Time</label>
+<select id="startTime" name="startTime" required>
+  <option value="" disabled selected>Select one</option>
+  <option value="Immediately / Within 2 weeks">Immediately / Within 2 weeks</option>
+  <option value="1-2 months">1-2 months</option>
+  <option value="2-3 months">2-3 months</option>
+  <option value="3+ months">3+ months</option>
+</select>
+
 
             <!-- Hidden field to redirect after submit -->
             <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
