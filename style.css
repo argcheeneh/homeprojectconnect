@@ -20,13 +20,19 @@ body {
   padding: 20px;
 }
 
-/* HEADER / HERO */
+/* HERO HEADER */
 header {
   text-align: center;
-  padding: 100px 20px;
-  background: linear-gradient(135deg, #00BFA6, #1DE9B6); /* Teal gradient */
+  padding: 120px 20px;
+  background: linear-gradient(
+      rgba(0,0,0,0.3),
+      rgba(0,0,0,0.2)
+    ),
+    url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80') no-repeat center center;
+  background-size: cover;
   color: white;
   position: relative;
+  overflow: hidden;
 }
 
 header h1 {
@@ -36,50 +42,41 @@ header h1 {
 
 header p {
   font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
 }
-
-/* OPTIONAL LOGO */
-/* header .logo { width: 150px; margin-top: 20px; } */
 
 /* FORM SECTION */
 #form-section {
-  padding: 60px 20px;
-  background-color: #FFFFFF;
-  border-radius: 16px;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-  margin: -80px auto 60px;
-  position: relative;
-  z-index: 1;
+  padding: 80px 20px;
+  background-color: #f5f7fa;
 }
 
 #form-section h2 {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   font-size: 2rem;
   color: #333333;
 }
 
-/* IFRAME FORM */
+/* FORM CARD */
+.form-card {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
 #form-section iframe {
   width: 100%;
-  border-radius: 10px;
-  border: 2px solid #FF6B6B; /* Coral accent */
-}
-
-/* BUTTONS (if any) */
-button {
-  background-color: #FF6B6B;
-  color: #fff;
-  border: none;
-  padding: 12px 30px;
-  font-size: 1rem;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-button:hover {
-  background-color: #FF5252;
+  border-radius: 12px;
+  border: 2px solid #FF6B6B;
 }
 
 /* FOOTER */
@@ -91,16 +88,33 @@ footer {
   font-size: 0.9rem;
 }
 
+/* FADE-IN ANIMATION */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s forwards;
+}
+
+.fade-in.delay {
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* RESPONSIVE */
 @media(max-width: 600px){
   header h1 {
     font-size: 2rem;
   }
+  header p {
+    font-size: 1rem;
+  }
   #form-section h2 {
     font-size: 1.5rem;
-  }
-  #form-section {
-    padding: 40px 15px;
-    margin: -60px auto 40px;
   }
 }
