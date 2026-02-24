@@ -37,7 +37,22 @@
 
             <!-- Phone -->
             <label for="phone">Phone Number</label>
-            <input type="tel" name="Phone" id="phone" placeholder="+1 720 589 2867" pattern="\+1\d{10}" required>
+            <div class="form-group">
+  <label for="phone">Phone Number</label>
+  <div style="display:flex; align-items:center;">
+    <span style="padding:0 10px; background:#eee; border:1px solid #ccc; border-right:none;">+1</span>
+    <input 
+      type="tel" 
+      name="Phone" 
+      id="phone" 
+      placeholder="720 589 2867" 
+      pattern="\d{10}" 
+      required
+      style="flex:1; border:1px solid #ccc; border-left:none; padding:8px;"
+    >
+  </div>
+</div>
+
 
 
             <!-- Project Type -->
